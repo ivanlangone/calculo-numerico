@@ -77,12 +77,8 @@ else
         end        
     end    
 end
-
-if ~convergiu
-    fprintf("Tolerância não atingida após %d iterações. Aproximação final: %.15e", contador, raiz_old)
 end
 
-end
 
 
 
