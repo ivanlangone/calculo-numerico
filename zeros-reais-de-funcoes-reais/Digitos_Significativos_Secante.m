@@ -59,11 +59,4 @@ for i=1:max_iteracao
     end
 
 end
-
-if ~convergiu
-    fprintf('Método não convergiu após %d iterações.\n', max_iteracao);
-else
-    fprintf('A raiz da função principal é: %.10f\n', raiz);
-end
-
 end
