@@ -30,7 +30,7 @@ if f(a) * f(b) >= 0
     disp("Introduza novo intervalo tal que f(a) * f(b) < 0")
 else
     if (b - a) < tolerancia
-    raiz = (a + b)/2;
+    raiz = (a*(f(b)) - b*(f(a))) / (f(b) - f(a));
     disp("Foi necessária 01 iteração\n\n")
     fprintf('A raiz da função é: %.10f\n\n', raiz)
 
