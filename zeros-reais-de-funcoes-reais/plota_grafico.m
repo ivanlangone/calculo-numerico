@@ -1,3 +1,8 @@
+
+% ATENÇÃO!!
+% APENAS O CÓDIGO ABAIXO FOI CRIADO PELO GEMINI PARA ME AUXILIAR E DAR
+% RAPIDEZ NOS CÓDIGOS REFERENTES AOS MODELOS DE CÁLCULO DE RAIZES
+
 function plota_grafico(f)
 % PLOTA_GRAFICO Plota uma função f(x) em um intervalo fixo.
 %
