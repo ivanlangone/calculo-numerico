@@ -1,14 +1,16 @@
 % Exemplos de teste
 
-% Newton_Raphson(["x + y - 3"; "x^2 + y^2 - 9"],[1; 5],10^-4,10^-4)
+% newton_raphson(["x + y - 3"; "x^2 + y^2 - 9"],[1; 5],10^-4,10^-4)
 
-% Newton_Raphson(["10*(y - x^2)"; "1 - x"],[-1.2; 1],10^-4,10^-4)
+% newton_raphson(["10*(y - x^2)"; "1 - x"],[-1.2; 1],10^-4,10^-4)
 
-function [] = naoLinear (funcoes, X0, epsilon01, epsilon02)
+function newton_raphson (funcoes, X0, epsilon01, epsilon02)
 
     format long
 
     F = funcoes;
+
+    plota_grafico(F);
     
     x = X0;
 

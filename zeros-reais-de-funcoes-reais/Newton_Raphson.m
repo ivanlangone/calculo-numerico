@@ -1,8 +1,8 @@
 % Exemplo de teste
 
-% Newton_Raphson(@(x) (x^3 - 9*x + 3),1.5,10^-6,10^-6)
+% newton_raphson(@(x) (x^3 - 9*x + 3),1.5,10^-6,10^-6)
 
-function [] = newtonRaphson(funcao,chute_inicial,epsilon01,epsilon02)
+function [] = newton_raphson(funcao,chute_inicial,epsilon01,epsilon02)
 format long;
 
 % Entrada 01: Função
@@ -29,6 +29,8 @@ max_iteracao = 100;
 convergiu = false;
 
 contador = 0;
+
+plota_grafico(f);
 
 if abs(f(x0)) < tolerancia_01
     raiz = x0;

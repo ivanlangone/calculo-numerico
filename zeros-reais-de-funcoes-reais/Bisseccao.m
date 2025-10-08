@@ -1,9 +1,9 @@
 % Exemplos de teste
 
-% Bisseccao(@(x) ((3*x - 5)/(x - 4)),0,1,10^-4,3)
-% Bisseccao(@(x) ((3*x - 5)/(x - 4)),0,5,10^-4,3)
+% bisseccao(@(x) ((3*x - 5)/(x - 4)),1,4,10^-4)
+% bisseccao(@(x) ((3*x - 5)/(x - 4)),0,5,10^-4)
 
-function [] = bisseccao(funcao,A,B,E)
+function bisseccao(funcao,A,B,E)
 format long;
 
 % Entrada 01: Função
@@ -22,10 +22,13 @@ convergiu = false;
 
 contador = 0;
 
+plota_grafico(f);
+
 % Verifica se f(a)*f(b) < 0
 
 if f(a) * f(b) >= 0
     disp("Introduza novo intervalo tal que f(a) * f(b) < 0")
+    return
 else 
 
     if (b - a) < erro
@@ -63,11 +66,9 @@ else
                 a = x;
             end
         end        
-    end    
-end
-
+    end
 if ~convergiu
     fprintf("Tolerância não atingida após %d iterações. Aproximação final: %.15e", contador, x)
 end
-
+end
 end

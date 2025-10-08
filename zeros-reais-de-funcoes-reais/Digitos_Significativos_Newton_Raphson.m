@@ -1,14 +1,14 @@
 % Exemplo de teste
 
-% Digitos_Significativos_Newton_Raphson(@(x) (x*log(x) + x^2),0.5,2)
-% Digitos_Significativos_Newton_Raphson(@(x) (sqrt(x)*exp(x) - 2),0.6,2)
-% Digitos_Significativos_Newton_Raphson(@(x) (x^3 + x - 100),5,2)
-% Digitos_Significativos_Newton_Raphson(@(x) (x^2 - 2),1.5,2)
-% Digitos_Significativos_Newton_Raphson(@(x) (x^2 - 2),-1.5,2)
-% Digitos_Significativos_Newton_Raphson(@(x) ((3*x - 5) / (x - 4)),2,2)
-% Digitos_Significativos_Newton_Raphson(@(x) (2*x - 4),2,2)
+% digitos_significativos_newton_raphson(@(x) (x*log(x) + x^2),0.5,2)
+% digitos_significativos_newton_raphson(@(x) (sqrt(x)*exp(x) - 2),0.6,2)
+% digitos_significativos_newton_raphson(@(x) (x^3 + x - 100),5,2)
+% digitos_significativos_newton_raphson(@(x) (x^2 - 2),1.5,2)
+% digitos_significativos_newton_raphson(@(x) (x^2 - 2),-1.5,2)
+% digitos_significativos_newton_raphson(@(x) ((3*x - 5) / (x - 4)),2,2)
+% digitos_significativos_newton_raphson(@(x) (2*x - 4),2,2)
 
-function [] = newtonRaphson(funcao,chute_inicial,digitoSignificativo)
+function digitos_significativos_newton_raphson(funcao,chute_inicial,digitoSignificativo)
 format long;
 
 % Entrada 01: Função
@@ -34,6 +34,8 @@ max_iteracao = 100;
 convergiu = false;
 
 contador = 0;
+
+plota_grafico(f);
 
 if abs(f(x0)) < tolerancia
     raiz = x0;

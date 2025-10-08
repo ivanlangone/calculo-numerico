@@ -1,9 +1,9 @@
 % Exemplos de teste
 
-% Digitos_Significativos_Bisseccao(@(x) ((3*x - 5)/(x - 4)),0,1,3)
-% Digitos_Significativos_Bisseccao(@(x) ((3*x - 5)/(x - 4)),0,5,3)
+% digitos_significativos_bisseccao(@(x) ((3*x - 5)/(x - 4)),0,1,3)
+% digitos_significativos_bisseccao(@(x) ((3*x - 5)/(x - 4)),0,5,3)
 
-function [] = bisseccao(funcao,A,B,D)
+function digitos_significativos_bisseccao(funcao,A,B,D)
 format long;
 
 % Entrada 01: Função
@@ -25,12 +25,15 @@ convergiu = false;
 
 contador = 0;
 
+plota_grafico(f);
+
 raiz_old = 0;
 
 % Verifica se f(a)*f(b) < 0
 
 if f(a) * f(b) >= 0
     disp("Introduza novo intervalo tal que f(a) * f(b) < 0")
+    return
 else 
 
     if (b - a) < tolerancia
@@ -78,9 +81,3 @@ else
     end    
 end
 end
-
-
-
-
-
-

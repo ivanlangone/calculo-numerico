@@ -1,14 +1,14 @@
 % Exemplo de teste
 
-% Digitos_Significativos_Secante(@(x) (x*log(x) + x^2),0.8,0.5,2)
-% Digitos_Significativos_Secante(@(x) (sqrt(x)*exp(x) - 2),0.3,0.4,2)
-% Digitos_Significativos_Secante(@(x) (x^3 + x - 100),4.5,5,2)
-% Digitos_Significativos_Secante(@(x) (x^2 - 2),1.5,1.8,2)
-% Digitos_Significativos_Secante(@(x) (x^2 - 2),-1.5,-1.8,2)
-% Digitos_Significativos_Secante(@(x) ((3*x - 5) / (x - 4)),0.5,2,2)
-% Digitos_Significativos_Secante(@(x) (2*x - 4),0.5,2,2)
+% digitos_significativos_secante(@(x) (x*log(x) + x^2),0.8,0.5,2)
+% digitos_significativos_secante(@(x) (sqrt(x)*exp(x) - 2),0.3,0.4,2)
+% digitos_significativos_secante(@(x) (x^3 + x - 100),4.5,5,2)
+% digitos_significativos_secante(@(x) (x^2 - 2),1.5,1.8,2)
+% digitos_significativos_secante(@(x) (x^2 - 2),-1.5,-1.8,2)
+% digitos_significativos_secante(@(x) ((3*x - 5) / (x - 4)),0.5,2,2)
+% digitos_significativos_secante(@(x) (2*x - 4),0.5,2,2)
 
-function [] = secante(funcao,chute_inicial_00,chute_inicial_01,digitoSignificativo)
+function digitos_significativos_secante(funcao,chute_inicial_00,chute_inicial_01,digitoSignificativo)
 format long;
 
 % Entrada 01: Função
@@ -26,6 +26,8 @@ max_iteracao = 10000;
 convergiu = false;
 
 contador = 1;
+
+plota_grafico(f);
 
 raiz = "";
 

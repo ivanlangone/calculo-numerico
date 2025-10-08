@@ -1,14 +1,17 @@
 % Exemplos de teste
 
-% Ponto_Fixo(@(x) (((x^3)/9) + (1/3)),0.5,5*10^-4,5*10^-4)
-% Ponto_Fixo(@(x) (3*x^(-1/4) + cos(x)),3,10^-6,10^-6)
+% ponto_fixo(@(x) (x^3 - 9*x + 3),@(x) ((x^3)/9 + 1/3),0.5,5*10^-4,5*10^-4)
 
 
-function [] = ponto_fixo(funcao_iteracao,chute_inicial,epsilon01,epsilon02)
+function ponto_fixo(funcao_encontrar_raiz,funcao_iteracao,chute_inicial,epsilon01,epsilon02)
 format long;
 
-% Entrada 01: Função
-f = @(x) funcao_iteracao(x);
+% Entrada 00: Função a ser encontrada a raiz
+f = @(x) funcao_encontrar_raiz(x);
+plota_grafico(f)
+
+% Entrada 01: Função de iteração
+F = @(x) funcao_iteracao(x);
 
 % Entrada 02: Chute inicial
 x0 = chute_inicial;
@@ -25,7 +28,7 @@ convergiu = false;
 
 contador = 0;
 
-if abs(f(x0)) < tolerancia_01
+if abs(F(x0)) < tolerancia_01
     raiz = x0;
     fprintf('Raiz encontrada: %.10f\n', raiz);
 
@@ -35,18 +38,20 @@ else
         contador = contador + 1;
         fprintf('Iteração %d\n', contador)
     
-        y_funcao_iteracao = f(x0);    
+        y_funcao_iteracao = F(x0);    
         x1 = y_funcao_iteracao;
 
-        if abs(f(x1)) < tolerancia_01 || abs(x1 - x0) < tolerancia_02
+        if abs(F(x1)) < tolerancia_01 || abs(x1 - x0) < tolerancia_02
             raiz = x1;
             fprintf('Raiz encontrada: %.10f\n', raiz);
+            fprintf('f(x): %.10f\n', f(raiz));
             convergiu = true;
             break
         end
 
         raiz = x1;
         fprintf('Raiz encontrada: %.10f\n', raiz);
+        fprintf('f(x): %.10f\n', f(raiz));
 
         x0 = x1;
 

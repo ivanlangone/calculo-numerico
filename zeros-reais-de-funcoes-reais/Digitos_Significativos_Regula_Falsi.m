@@ -1,8 +1,8 @@
 % Exemplos de teste
 
-% Digitos_Significativos_Regula_Falsi(@(x) (exp(-x^2) - cos(x) + 0.5),1,6,3)
+% digitos_significativos_regula_falsi(@(x) (exp(-x^2) - cos(x) + 0.5),1,6,3)
 
-function [] = regula_falsi(funcao,A,B,D)
+function digitos_significativos_regula_falsi(funcao,A,B,D)
 format long;
 
 % Entrada 01: Função
@@ -23,6 +23,8 @@ maximoIteracao = 10000;
 convergiu = false;
 
 contador = 0;
+
+plota_grafico(f);
 
 raiz_old = 0;
 
