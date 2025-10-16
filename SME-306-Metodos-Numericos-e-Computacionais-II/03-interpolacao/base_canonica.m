@@ -1,5 +1,5 @@
 % Exemplo de teste
-% base_canonica ([2 7.39; 2.2 9.03; 2.4 11.02], 2.3
+% base_canonica ([2 7.39; 2.2 9.03; 2.4 11.02], 2.3)
 
 
 function base_canonica (pontosInterpolacao, pontoAnalisar)
@@ -53,6 +53,8 @@ for i = 1:length(coeficientes)
     valorInterpolado = valorInterpolado + coeficientes(i)*(pontoInteresse^(i-1));
 end
 
-fprintf('O valor interpolado para %f pela base canônica é: %f\n',pontoInteresse,valorInterpolado)
+fprintf('O polinômio interpolador por base canônica é de grau %d e\n', grauPolinomio)
+fprintf('o valor interpolado para %f é de: %f\n',pontoInteresse,valorInterpolado)
+
 
 end

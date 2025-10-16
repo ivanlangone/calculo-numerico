@@ -63,6 +63,40 @@ for j = 2:numLinhas + 1
     fprintf('Coeficiente a%d: %f\n',j - 2,tabelaOrdem(1,j));
 end
 
+valorInterpolado = coeficientesPolinomio(numLinhas);
+
+for i = (numLinhas-1):-1:1
+    valorInterpolado = coeficientesPolinomio(i) + (pontoInteresse - pontosInterpolacao(i,1)) * valorInterpolado;
+end
+
+% O trecho das linhas 66 a 70 (cálculo da interpolação no ponto de
+% interesse) funciona de trás para frente. Esse trecho poderia ser
+% substituído pelo trecho comentado, abaixo, que mais trabalhosa e que não
+% está na ordem inversa de realização dos cálculos
+%
+%
+% valorInterpolado = coeficientesPolinomio(1);
+% 
+% for i = 1:numLinhas-1
+% 
+%     temporario = 1;
+% 
+%     for j = 1:i
+% 
+%         produto = temporario*(pontoInteresse - pontosInterpolacao(j,1));
+% 
+%         temporario = produto;
+% 
+%     end
+% 
+%     valorPolinomioPontoInteresse = valorInterpolado + coeficientesPolinomio(i+1)*temporario;
+% 
+%     temporario = 1;
+% 
+% end
+
+fprintf('O polinômio interpolador por Newton (diferenças divididas) é de grau %d e\n', grauPolinomio)
+fprintf('o valor interpolado para %f é de: %f\n',pontoInteresse,valorInterpolado)
 
 
 
