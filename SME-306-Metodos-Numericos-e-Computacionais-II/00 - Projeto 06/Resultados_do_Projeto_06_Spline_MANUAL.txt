@@ -1,4 +1,4 @@
-Projeto_06_Spline_MANUAL
+Projeto_06_Spline_do_MATLAB
 Pontos Inseridos: 
 
 pontos =
