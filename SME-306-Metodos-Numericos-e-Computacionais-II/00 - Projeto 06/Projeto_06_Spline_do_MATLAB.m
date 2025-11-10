@@ -15,6 +15,13 @@ h_passo = 1e-6;
 quantidadeIntervalosSimpson = 500; % quantidade par de intervalos
 quantidadeIntervaloGauss = 500;
 
+fprintf('Massa: %.2f kg\n\n', massa);
+fprintf('Gravidade: %.2f m/s²\n\n', gravidade);
+fprintf('Tamanho do passo (h): %.2f \n\n', h_passo);
+fprintf('Nº de Intervalos para aplicar integração pela Regra de Simpson 1/3: %.2f \n\n', quantidadeIntervalosSimpson);
+fprintf('Nº de Intervalos para aplicar integração pela Quadratura Gaussiana: %.2f \n\n', quantidadeIntervaloGauss);
+
+
 % -------------------------------------------------------------------------
 
 % Item 2(a): Interpolação pela SPLINE CÚBICA do MATLAB
