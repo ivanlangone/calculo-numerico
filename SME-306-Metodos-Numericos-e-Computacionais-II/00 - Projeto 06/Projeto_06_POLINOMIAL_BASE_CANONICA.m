@@ -1,8 +1,6 @@
 clear all
 clc
 
-%pontosInterpolacao = [2 7.39; 2.2 9.03; 2.4 11.02; 3 7.3; 4 8.9]
-
 disp('Pontos Inseridos: ')
 
 Haversine;

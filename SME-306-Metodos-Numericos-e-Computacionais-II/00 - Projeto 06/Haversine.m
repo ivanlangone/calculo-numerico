@@ -39,4 +39,5 @@ for i=2:numLinhas
 
 end
 
-%pontosInterpolacao
+
+%fprintf('Pontos Finais para Interpolação: %d',pontosInterpolacao);

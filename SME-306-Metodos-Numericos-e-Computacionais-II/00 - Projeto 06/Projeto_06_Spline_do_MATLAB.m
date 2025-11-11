@@ -1,19 +1,19 @@
 clear all
 clc
 
-%pontosInterpolacao = [2 7.39; 2.2 9.03; 2.4 11.02; 3 7.3; 4 8.9]
-
 disp('Pontos Inseridos: ');
 disp('');
 
 Haversine;
 
+format long
+
 massa = 70;
 gravidade = 9.8;
 h_passo = 1e-6;
 
-quantidadeIntervalosSimpson = 500; % quantidade par de intervalos
-quantidadeIntervaloGauss = 500;
+quantidadeIntervalosSimpson = 1000; % quantidade par de intervalos
+quantidadeIntervaloGauss = 1000;
 
 fprintf('Massa: %.2f kg\n\n', massa);
 fprintf('Gravidade: %.2f m/s²\n\n', gravidade);
